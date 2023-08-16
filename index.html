@@ -63,7 +63,7 @@
 
   <script>
     const url = new URL(window.location.href);
-    const ws = new WebSocket(`ws://${url.hostname}:8080`);
+    const ws = new WebSocket(`wss://${url.hostname}`);
     const t = document.getElementById('t');
     ws.onerror = (error) => {
       t.innerHTML = `<div class="container"><div class="signals"><div class="dot first"></div><div class="dot second"></div><div class="dot third"></div></div>
